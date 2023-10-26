@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.metrics import mean_absolute_error
 
 from src.data_processing import load_data, do_tvt_split, apply_scaling
-from src.model import create_model, load_model_from_mlflow, load_best_model_from_mlflow
+from src.model import create_model, create_gridsearch_model, load_model_from_mlflow, load_best_model_from_mlflow
 
 df = load_data()
 
@@ -37,10 +37,10 @@ training = True
 testing = False
 
 if training:
-    mlflow.autolog()
-    model = create_model()
-    mlflow.set_experiment("Random Forest Regression Model")
-    experiment = mlflow.get_experiment_by_name("Random Forest Regression Model")
+    mlflow.sklearn.autolog(max_tuning_runs=10)
+    model = create_gridsearch_model()
+    mlflow.set_experiment("Random Forest Regression HP Tuning Model")
+    experiment = mlflow.get_experiment_by_name("Random Forest Regression HP Tuning Model")
 
     with mlflow.start_run(experiment_id=experiment.experiment_id):
         model.fit(X_train, y_train)
