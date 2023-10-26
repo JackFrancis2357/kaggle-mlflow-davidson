@@ -31,7 +31,7 @@ def do_tvt_split(df):
     print("Starting train val test split")
     # Get my X and my Y
     X = df.iloc[:, :-1]
-    y = df.iloc[:, -1]
+    y = df.iloc[:, -1].values
 
     # Create the train/test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
