@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/d1120/Documents/Davidson_AIML_COI/Fall_2023_Comp/kaggle-mlflow-davidson/mlruns/627979385030134637/a4504630011547e182cbbe9aa7b5d0b9/artifacts
+end_time: 1698348344761
+entry_point_name: ''
+experiment_id: '627979385030134637'
+lifecycle_stage: active
+run_id: a4504630011547e182cbbe9aa7b5d0b9
+run_name: wise-fawn-264
+run_uuid: a4504630011547e182cbbe9aa7b5d0b9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698348341798
+status: 3
+tags: []
+user_id: d1120

@@ -33,7 +33,7 @@ def create_gridsearch_model(model_configs):
 
 def load_model_from_mlflow():
     print("Loading mlflow model based on specific run id")
-    model = mlflow.sklearn.load_model("runs:/550312c0b91d410c9dfcdbf515b783f5/model/")
+    model = mlflow.sklearn.load_model("runs:/f8ba0ee5524642e5a78393610840b059/model/")
     return model
 
 

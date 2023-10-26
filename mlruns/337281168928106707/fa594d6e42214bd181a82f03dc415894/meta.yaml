@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/d1120/Documents/Davidson_AIML_COI/Fall_2023_Comp/kaggle-mlflow-davidson/mlruns/337281168928106707/fa594d6e42214bd181a82f03dc415894/artifacts
+end_time: 1698349159732
+entry_point_name: ''
+experiment_id: '337281168928106707'
+lifecycle_stage: active
+run_id: fa594d6e42214bd181a82f03dc415894
+run_name: skittish-smelt-750
+run_uuid: fa594d6e42214bd181a82f03dc415894
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698349157774
+status: 3
+tags: []
+user_id: d1120

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/d1120/Documents/Davidson_AIML_COI/Fall_2023_Comp/kaggle-mlflow-davidson/mlruns/337281168928106707/c8ef669f221048d08ec5192dfee91f7e/artifacts
+end_time: 1698349142961
+entry_point_name: ''
+experiment_id: '337281168928106707'
+lifecycle_stage: active
+run_id: c8ef669f221048d08ec5192dfee91f7e
+run_name: placid-stoat-377
+run_uuid: c8ef669f221048d08ec5192dfee91f7e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698349140909
+status: 3
+tags: []
+user_id: d1120

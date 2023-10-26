@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/d1120/Documents/Davidson_AIML_COI/Fall_2023_Comp/kaggle-mlflow-davidson/mlruns/627979385030134637/679f7815b49e43bb957eb894da601e3b/artifacts
+end_time: 1698348351746
+entry_point_name: ''
+experiment_id: '627979385030134637'
+lifecycle_stage: active
+run_id: 679f7815b49e43bb957eb894da601e3b
+run_name: smiling-elk-639
+run_uuid: 679f7815b49e43bb957eb894da601e3b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698348348973
+status: 3
+tags: []
+user_id: d1120

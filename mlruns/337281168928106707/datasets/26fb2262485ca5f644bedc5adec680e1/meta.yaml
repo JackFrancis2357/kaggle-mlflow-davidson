@@ -1,0 +1,12 @@
+digest: 33d2dc5c
+name: dataset
+profile: '{"num_rows": 934, "num_elements": 11208}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "LotArea"}, {"type": "long",
+  "name": "OverallQual"}, {"type": "long", "name": "OverallCond"}, {"type": "long",
+  "name": "YearBuilt"}, {"type": "long", "name": "1stFlrSF"}, {"type": "long", "name":
+  "2ndFlrSF"}, {"type": "long", "name": "FullBath"}, {"type": "long", "name": "HalfBath"},
+  {"type": "long", "name": "BedroomAbvGr"}, {"type": "long", "name": "KitchenAbvGr"},
+  {"type": "long", "name": "MoSold"}, {"type": "long", "name": "YrSold"}]}'
+source: '{"tags": {"mlflow.user": "d1120", "mlflow.source.name": "c:/Users/d1120/Documents/Davidson_AIML_COI/Fall_2023_Comp/kaggle-mlflow-davidson/main.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "e7b10efc37d14cd43d6952b7a106ff1236304d15"}}'
+source_type: code

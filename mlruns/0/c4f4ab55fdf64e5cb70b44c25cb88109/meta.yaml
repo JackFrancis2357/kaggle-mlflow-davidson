@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/d1120/Documents/Davidson_AIML_COI/Fall_2023_Comp/kaggle-mlflow-davidson/mlruns/0/c4f4ab55fdf64e5cb70b44c25cb88109/artifacts
+end_time: 1698347554640
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c4f4ab55fdf64e5cb70b44c25cb88109
+run_name: mysterious-tern-0
+run_uuid: c4f4ab55fdf64e5cb70b44c25cb88109
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698347552799
+status: 3
+tags: []
+user_id: d1120

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/d1120/Documents/Davidson_AIML_COI/Fall_2023_Comp/kaggle-mlflow-davidson/mlruns/503018866850757527/db23e5b8d3594fabab28e5a828bc9e2b/artifacts
+end_time: 1698348686488
+entry_point_name: ''
+experiment_id: '503018866850757527'
+lifecycle_stage: active
+run_id: db23e5b8d3594fabab28e5a828bc9e2b
+run_name: magnificent-mare-857
+run_uuid: db23e5b8d3594fabab28e5a828bc9e2b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698348640008
+status: 3
+tags: []
+user_id: d1120

@@ -1,0 +1,6 @@
+scaling: False
+model: LinearRegression
+experiment_name: Linear Regression Model
+use_gridsearch: False
+do_training: True
+do_testing: False

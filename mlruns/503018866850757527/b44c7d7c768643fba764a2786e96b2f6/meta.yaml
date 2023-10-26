@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/d1120/Documents/Davidson_AIML_COI/Fall_2023_Comp/kaggle-mlflow-davidson/mlruns/503018866850757527/b44c7d7c768643fba764a2786e96b2f6/artifacts
+end_time: 1698348686874
+entry_point_name: ''
+experiment_id: '503018866850757527'
+lifecycle_stage: active
+run_id: b44c7d7c768643fba764a2786e96b2f6
+run_name: omniscient-eel-736
+run_uuid: b44c7d7c768643fba764a2786e96b2f6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698348640008
+status: 3
+tags: []
+user_id: d1120
