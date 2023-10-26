@@ -1,15 +1,20 @@
 import mlflow
 import numpy as np
+import yaml
 from sklearn.metrics import mean_absolute_error
 
 from src.data_processing import load_data, do_tvt_split, apply_scaling
 from src.model import create_model, create_gridsearch_model, load_model_from_mlflow, load_best_model_from_mlflow
 
+with open("config.yml", 'r') as file:
+    model_configs = yaml.safe_load(file)
+
 df = load_data()
 
 X_train, X_val, X_test, y_train, y_val, y_test = do_tvt_split(df)
 
-X_train, X_val, X_test, scaler = apply_scaling(X_train, X_val, X_test)
+if model_configs['scaling']:
+    X_train, X_val, X_test, scaler = apply_scaling(X_train, X_val, X_test)
 
 
 def calculate_mae(x, y, model):
@@ -33,14 +38,14 @@ def get_scores(x_train, x_val, x_test, y_train, y_val, y_test, model):
     return train_mae, val_mae, test_mae
 
 
-training = True
-testing = False
-
-if training:
+if model_configs['do_training']:
     mlflow.sklearn.autolog(max_tuning_runs=10)
-    model = create_gridsearch_model()
-    mlflow.set_experiment("Random Forest Regression HP Tuning Model")
-    experiment = mlflow.get_experiment_by_name("Random Forest Regression HP Tuning Model")
+    if model_configs['use_gridsearch']:
+        model = create_gridsearch_model(model_configs)
+    else:
+        model = create_model(model_configs)
+    mlflow.set_experiment(model_configs['experiment_name'])
+    experiment = mlflow.get_experiment_by_name(model_configs['experiment_name'])
 
     with mlflow.start_run(experiment_id=experiment.experiment_id):
         model.fit(X_train, y_train)
@@ -48,7 +53,9 @@ if training:
         mlflow.log_metric("Train_MAE", train_mae)
         mlflow.log_metric("Validation_MAE", val_mae)
         mlflow.log_metric("Test_MAE", test_mae)
+        mlflow.log_params(model_configs)
+        mlflow.log_artifact('config.yml')
 
-elif testing:
+if model_configs['do_testing']:
     model = load_best_model_from_mlflow()
     train_mae, val_mae, test_mae = get_scores(X_train, X_val, X_test, y_train, y_val, y_test, model)

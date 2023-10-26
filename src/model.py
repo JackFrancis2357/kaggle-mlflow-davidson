@@ -1,14 +1,18 @@
 import mlflow
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import GridSearchCV
 
 
-def create_model():
-    model = RandomForestRegressor()
+def create_model(model_configs):
+    if model_configs["model"] == "RandomForestRegressor":
+        model = RandomForestRegressor()
+    elif model_configs["model"] == "LinearRegression":
+        model = LinearRegression()
     return model
 
 
-def create_gridsearch_model():
+def create_gridsearch_model(model_configs):
     param_grid = {
         "max_depth": [None, 5, 8, 10, 12, 15],
         "min_samples_split": [10, 12, 13, 14, 16],
@@ -16,7 +20,11 @@ def create_gridsearch_model():
         "max_features": [None, "sqrt", "log2"],
     }
 
-    model = RandomForestRegressor()
+    if model_configs["model"] == "RandomForestRegressor":
+        model = RandomForestRegressor()
+    elif model_configs["model"] == "LinearRegression":
+        model = LinearRegression()
+
     grid_search = GridSearchCV(
         estimator=model, param_grid=param_grid, scoring="neg_mean_absolute_error", cv=5, n_jobs=-1, verbose=1
     )
