@@ -39,8 +39,8 @@ testing = False
 if training:
     mlflow.autolog()
     model = create_model()
-    mlflow.set_experiment("Linear Regression Model")
-    experiment = mlflow.get_experiment_by_name("Linear Regression Model")
+    mlflow.set_experiment("Random Forest Regression Model")
+    experiment = mlflow.get_experiment_by_name("Random Forest Regression Model")
 
     with mlflow.start_run(experiment_id=experiment.experiment_id):
         model.fit(X_train, y_train)
